@@ -202,7 +202,7 @@ class PollingThread(QtCore.QThread):
             pythoncom.CoInitialize()
 
             # A new WMI object is needed in the thread
-            hwmon_thread_wmi = wmi.WMI(namespace="root\OpenHardwareMonitor")
+            hwmon_thread_wmi = wmi.WMI(namespace="root\LibreHardwareMonitor")
 
             # "keep_running" should be True before starting the while loop
             self.keep_running = True

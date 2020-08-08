@@ -19,7 +19,7 @@ def initialize_hwmon():
 
     # Access the OpenHWMon WMI interface
     try:
-        hwmon = wmi.WMI(namespace="root\OpenHardwareMonitor")
+        hwmon = wmi.WMI(namespace="root\LibreHardwareMonitor")
         return hwmon
 
     # WMI exception (e.g. no namespace "root\OpenHardwareMonitor" indicates OpenHWMon is not installed
@@ -205,6 +205,3 @@ def get_hardware_name(id, hardwares):
     for hardware in hardwares:
         if hardware.Identifier == id:
             return hardware.Name
-
-
-
